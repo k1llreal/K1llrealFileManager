@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="center" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="sample.Controller">
+    <Label fx:id="timeLabel" />
+    <MenuBar>
+        <Menu text="Файл">
+            <MenuItem onAction="#menuItemFileRenameAction" text="Переименовать" />
+            <MenuItem onAction="#menuItemFeaturesAction" text="Cвойства" />
+            <MenuItem onAction="#menuItemDeleteAction" text="Удалить" />
+            <MenuItem onAction="#menuItemFileExitAction" text="Выйти из программы" />
+        </Menu>
+    </MenuBar>
+    <TextField fx:id="pathField" editable="false" focusTraversable="false" />
+    <ListView fx:id="filesList" onMouseClicked="#filesListClicked" VBox.vgrow="ALWAYS" />
+    <HBox spacing="5">
+        <Button maxWidth="Infinity" text="Скопировать" HBox.hgrow="ALWAYS" onAction="#copyAction"/>
+        <Button maxWidth="Infinity" text="Переместить" HBox.hgrow="ALWAYS" onAction="#moveAction"/>
+
+        <padding>
+            <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+        </padding>
+    </HBox>
+</VBox>
